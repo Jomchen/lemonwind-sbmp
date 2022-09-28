@@ -15,6 +15,7 @@ import lombok.NoArgsConstructor;
     <#if chainModel>
 import lombok.experimental.Accessors;
     </#if>
+import lombok.ToString;
 </#if>
 
 /**
@@ -27,12 +28,12 @@ import lombok.experimental.Accessors;
  */
 <#if entityLombokModel>
 @Data
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
-@Accessors(chain = true)
     <#if chainModel>
 @Accessors(chain = true)
     </#if>
+@ToString(callSuper = true)
 </#if>
 <#if table.convert>
 @TableName(${entity}.TABLE_NAME)
