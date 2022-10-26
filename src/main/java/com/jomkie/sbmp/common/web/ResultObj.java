@@ -17,6 +17,7 @@ public class ResultObj<T> {
         this.data = data;
     }
 
+@SuppressWarnings("unchecked")
     public static <T> ResultObj<T> build(ResponseEnum responseEnum, T data) {
         return new ResultObj(responseEnum.getCode(), responseEnum.getMsg(), data);
     }
