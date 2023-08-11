@@ -27,7 +27,7 @@ public class JomkieSbmpController {
      * @since 2022-09-13 10:32:01
      * @return com.yunxi.sbmp.jomkie.action.common.ResultObj<java.lang.String>
      */
-    @GetMapping(UrlConstant.TEST_ALL)
+    @GetMapping(UrlConstant.USER_JOMKIE_ALL)
     public ResultObj<Object> all(@PathVariable("code") Integer code) {
         Object data = null;
         if (Objects.equals(1, code)) {
