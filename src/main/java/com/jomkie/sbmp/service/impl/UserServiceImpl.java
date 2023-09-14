@@ -36,12 +36,13 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Override
     public void mulSave(int n) {
         User user = new LambdaQueryWrapper<User>().orderByDesc(User::getCreateTime).last(" LIMIT 1").getEntity();
-        long i = user == null ? 1 : user.getId() + 1;
-        List<User> userList = LongStream.range(i, i+n).mapToObj(id ->
-            new User().setAge((int)(20 + i))
-                    .setName("测试人员" + i)
-                    .setSex(i % 2 == 0 ? 0 : 1)
-                    .setRealName("测试人员" + i)
+        long start = user == null ? 1 : user.getId() + 1;
+        List<User> userList = LongStream.range(start, start+n).mapToObj(id ->
+            new User().setAge((int)(20 + id))
+                    .setName("测试人员" + id)
+                    .setSex(id % 2 == 0 ? 0 : 1)
+                    .setRealName("测试人员" + id)
+                    .setEmail("test" + id + "@gmail.com")
         ).collect(Collectors.toList());
         saveBatch(userList);
     }

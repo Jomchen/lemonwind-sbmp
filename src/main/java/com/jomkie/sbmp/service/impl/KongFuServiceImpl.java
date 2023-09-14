@@ -34,8 +34,8 @@ public class KongFuServiceImpl extends ServiceImpl<KongFuMapper, KongFu> impleme
     @Override
     public void mulSave(int n) {
         KongFu kongfu = new LambdaQueryWrapper<KongFu>().orderByDesc(KongFu::getCreateTime).last(" LIMIT 1").getEntity();
-        long i = kongfu == null ? 1 : kongfu.getId() + 1;
-        List<KongFu> kongfuList = LongStream.range(i, i+n).mapToObj(id -> {
+        long start = kongfu == null ? 1 : kongfu.getId() + 1;
+        List<KongFu> kongfuList = LongStream.range(start, start+n).mapToObj(id -> {
             KongFu kf = new KongFu();
             kf.setId(id);
             kf.setName("功夫" + id);
