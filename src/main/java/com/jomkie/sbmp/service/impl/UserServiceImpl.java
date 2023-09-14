@@ -35,7 +35,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Transactional
     @Override
     public void mulSave(int n) {
-        User user = new LambdaQueryWrapper<User>().orderByDesc(User::getId).last(" LIMIT 1").getEntity();
+        User user = getOne(new LambdaQueryWrapper<User>().orderByDesc(User::getId).last(" LIMIT 1"));
         long start = user == null ? 1 : user.getId() + 1;
         List<User> userList = LongStream.range(start, start+n).mapToObj(id ->
             new User().setAge((int)(20 + id))
