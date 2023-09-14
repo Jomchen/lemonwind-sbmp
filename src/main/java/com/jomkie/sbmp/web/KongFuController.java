@@ -1,6 +1,5 @@
 package com.jomkie.sbmp.web;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.jomkie.sbmp.common.web.ResultObj;
 import com.jomkie.sbmp.common.web.UrlConstant;
 import com.jomkie.sbmp.entity.KongFu;
@@ -11,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.LongStream;
 
 @RestController
 public class KongFuController {

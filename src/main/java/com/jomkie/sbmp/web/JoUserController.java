@@ -5,7 +5,6 @@ import com.jomkie.sbmp.common.web.UrlConstant;
 import com.jomkie.sbmp.entity.User;
 import com.jomkie.sbmp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@EnableTransactionManagement
 public class JoUserController {
 
     @Autowired

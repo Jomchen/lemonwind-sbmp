@@ -1,8 +1,6 @@
 package com.jomkie.sbmp.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.extension.conditions.query.QueryChainWrapper;
 import com.jomkie.sbmp.common.web.ResultObj;
 import com.jomkie.sbmp.entity.User;
 import com.jomkie.sbmp.mapper.UserMapper;
