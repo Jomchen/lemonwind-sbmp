@@ -22,7 +22,7 @@ public class MybatisPlusGenerator {
     static String outputDir = projectDir + "/src/main/java";
 
     static String parentPath = "com.jomkie.sbmp";
-    static String[] tableArray = {"jo_user"};
+    static String[] tableArray = {"jo_kong_fu"};
     static String[] prefixToIgnoreArray = {"jo_"};
 
     public static void main(String[] args) {
