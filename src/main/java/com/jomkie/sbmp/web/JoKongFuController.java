@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class KongFuController {
+public class JoKongFuController {
 
     @Autowired
     private KongFuService kongFuService;
