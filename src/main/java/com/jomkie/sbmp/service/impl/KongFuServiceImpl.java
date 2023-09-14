@@ -40,6 +40,7 @@ public class KongFuServiceImpl extends ServiceImpl<KongFuMapper, KongFu> impleme
             kf.setId(id);
             kf.setName("功夫" + id);
             kf.setLevel((int)(20 + id));
+            kf.setInventionUserId((int)id);
             return kf;
         }).collect(Collectors.toList());
         saveBatch(kongfuList);
