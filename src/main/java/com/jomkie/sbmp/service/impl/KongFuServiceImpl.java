@@ -24,6 +24,7 @@ import java.util.stream.LongStream;
 @Service
 public class KongFuServiceImpl extends ServiceImpl<KongFuMapper, KongFu> implements KongFuService {
 
+    @Transactional(readOnly = true)
     @Override
     public ResultObj<List<KongFu>> findAll() {
         List<KongFu> list = list();
