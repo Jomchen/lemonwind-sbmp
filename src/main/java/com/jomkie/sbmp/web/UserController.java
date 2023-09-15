@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class JoUserController {
+public class UserController {
 
     @Autowired
     private UserService userService;
@@ -21,7 +21,7 @@ public class JoUserController {
      * 查询所有
      * @return
      */
-    @RequestMapping(UrlConstant.JO_USER_FIND_ALL)
+    @RequestMapping(UrlConstant.USER_FIND_ALL)
     public ResultObj<List<User>> findAll() {
         return userService.findAll();
     }
@@ -31,7 +31,7 @@ public class JoUserController {
      * @param n
      * @return
      */
-    @RequestMapping(UrlConstant.JO_USER_MUL_SAVE)
+    @RequestMapping(UrlConstant.USER_MUL_SAVE)
     public ResultObj<String> mulSave(@PathVariable("n") int n) {
         userService.mulSave(n);
         return ResultObj.success("保存成功");
@@ -42,7 +42,8 @@ public class JoUserController {
      * @param id
      * @return
      */
-    public ResultObj<String> del(@PathVariable("id") long id) {
+    @RequestMapping(UrlConstant.USER_DEL)
+    public ResultObj<String> del(@PathVariable("id") int id) {
         userService.del(id);
         return ResultObj.success("删除成功");
     }

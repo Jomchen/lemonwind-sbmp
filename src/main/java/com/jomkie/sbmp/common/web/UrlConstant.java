@@ -4,13 +4,14 @@ public interface UrlConstant {
 
     String USER_JOMKIE_ALL = "/api/jomkie/user/all/{code}";
     String TEST_JOMKIE_ALL = "/api/jomkie/test/all";
-    String ABSTRACT_JOMKIE_CONTROLLER = "/api/jomkie/abstract/controller";
 
-    String JO_USER_FIND_ALL = "/api/jo/user/find/all";
-    String JO_USER_MUL_SAVE = "/api/jo/user/mul/save/{n}";
-    String JO_USER_DEL = "/api/jo/user/del/{id}";
+    String USER_FIND_ALL = "/api/user/find/all";
+    String USER_MUL_SAVE = "/api/user/mul/save/{n}";
+    String USER_DEL = "/api/user/del/{id}";
 
-    String JO_KONG_FU_FIND_ALL = "/api/jo/kongfu/find/all";
-    String JO_KONG_FU_MUL_SAVE = "/api/jo/kongfu/mul/save/{n}";
-    String JO_KONG_FU_DEL = "/api/jo/kongfu/del/{id}";
+    String U_KF_SAVE = "/api/uk/save/{n}";
+
+    String KONGFU_FIND_ALL = "/api/kongfu/find/all";
+    String KONGFU_MUL_SAVE = "/api/kongfu/mul/save/{n}";
+    String KONGFU_DEL = "/api/kongfu/del/{id}";
 }

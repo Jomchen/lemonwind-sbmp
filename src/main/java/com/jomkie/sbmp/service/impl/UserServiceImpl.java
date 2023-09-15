@@ -2,15 +2,20 @@ package com.jomkie.sbmp.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.jomkie.sbmp.common.web.ResultObj;
+import com.jomkie.sbmp.entity.KongFu;
 import com.jomkie.sbmp.entity.User;
 import com.jomkie.sbmp.mapper.UserMapper;
+import com.jomkie.sbmp.service.KongFuService;
 import com.jomkie.sbmp.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
 /**
@@ -23,6 +28,7 @@ import java.util.stream.LongStream;
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
+
 
     @Override
     public ResultObj<List<User>> findAll() {
@@ -47,7 +53,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Transactional
     @Override
-    public void del(long id) {
+    public void del(int id) {
         super.removeById(id);
     }
 

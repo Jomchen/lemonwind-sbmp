@@ -12,24 +12,24 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class JoKongFuController {
+public class KongFuController {
 
     @Autowired
     private KongFuService kongFuService;
 
-    @RequestMapping(UrlConstant.JO_KONG_FU_FIND_ALL)
+    @RequestMapping(UrlConstant.KONGFU_FIND_ALL)
     public ResultObj<List<KongFu>> findAll() {
         return kongFuService.findAll();
     }
 
-    @RequestMapping(UrlConstant.JO_KONG_FU_MUL_SAVE)
+    @RequestMapping(UrlConstant.KONGFU_MUL_SAVE)
     public ResultObj<String> mulSave(@PathVariable("n") int n) {
         kongFuService.mulSave(n);
         return ResultObj.success("保存功夫成功");
     }
 
-    @RequestMapping(UrlConstant.JO_KONG_FU_DEL)
-    public ResultObj<String> del(long id) {
+    @RequestMapping(UrlConstant.KONGFU_DEL)
+    public ResultObj<String> del(int id) {
         kongFuService.del(id);
         return ResultObj.success("删除功夫" + id + "成功");
     }

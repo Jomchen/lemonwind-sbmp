@@ -23,6 +23,6 @@ public interface KongFuService extends IService<KongFu> {
 
    void mulSave(int n);
 
-   void del(long id);
+   void del(int id);
 
 }

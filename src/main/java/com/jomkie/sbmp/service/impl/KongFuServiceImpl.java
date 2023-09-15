@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
 /**
@@ -34,13 +35,13 @@ public class KongFuServiceImpl extends ServiceImpl<KongFuMapper, KongFu> impleme
     @Override
     public void mulSave(int n) {
         KongFu kongfu = getOne(new LambdaQueryWrapper<KongFu>().orderByDesc(KongFu::getId).last(" LIMIT 1"));
-        long start = kongfu == null ? 1 : kongfu.getId() + 1;
-        List<KongFu> kongfuList = LongStream.range(start, start+n).mapToObj(id -> {
+        int start = kongfu == null ? 1 : kongfu.getId() + 1;
+        List<KongFu> kongfuList = IntStream.range(start, start+n).mapToObj(id -> {
             KongFu kf = new KongFu();
             kf.setId(id);
             kf.setName("功夫" + id);
-            kf.setLevel((int)(20 + id));
-            kf.setInventionUserId((int)id);
+            kf.setLevel(20 + id);
+            kf.setInventionUserId(id);
             return kf;
         }).collect(Collectors.toList());
         saveBatch(kongfuList);
@@ -48,7 +49,7 @@ public class KongFuServiceImpl extends ServiceImpl<KongFuMapper, KongFu> impleme
 
     @Transactional
     @Override
-    public void del(long id) {
+    public void del(int id) {
        removeById(id);
     }
 
