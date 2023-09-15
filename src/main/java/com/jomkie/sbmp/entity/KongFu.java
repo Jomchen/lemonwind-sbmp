@@ -37,7 +37,7 @@ public class KongFu extends JomkieEntity<KongFu> {
     private Integer level;
 
     @ApiModelProperty("创始人")
-    private Integer inventionUserId;
+    private Long inventionUserId;
 
     @Override
     public Serializable pkVal() {

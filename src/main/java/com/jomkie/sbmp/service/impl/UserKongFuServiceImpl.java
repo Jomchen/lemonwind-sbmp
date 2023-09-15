@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 
 @Service
 public class UserKongFuServiceImpl implements UserKongFuService {
@@ -30,12 +30,12 @@ public class UserKongFuServiceImpl implements UserKongFuService {
     @Override
     public ResultObj<String> addUserAndKongfu(int n) {
         User user = userService.getOne(new LambdaQueryWrapper<User>().orderByDesc(User::getId).last(" LIMIT 1"));
-        int start = user == null ? 1 : user.getId() + 1;
+        long start = user == null ? 1 : user.getId() + 1;
         List<User> userList = new ArrayList<>(n);
         List<KongFu> kongFuList = new ArrayList<>(n);
-        IntStream.range(start, start+n).forEach(userId -> {
+        LongStream.range(start, start+n).forEach(userId -> {
             User userBean = new User()
-                    .setAge((20 + userId))
+                    .setAge((int)(20 + userId))
                     .setName("关联人员" + userId)
                     .setSex(userId % 2 == 0 ? 0 : 1)
                     .setRealName("关联人员" + userId)
@@ -47,7 +47,7 @@ public class UserKongFuServiceImpl implements UserKongFuService {
             KongFu kongFu = new KongFu();
             kongFu.setInventionUserId(userId);
             kongFu.setName("关联功夫" + userId);
-            kongFu.setLevel(10 + userId);
+            kongFu.setLevel((int)(10 + userId));
             kongFuList.add(kongFu);
         });
 

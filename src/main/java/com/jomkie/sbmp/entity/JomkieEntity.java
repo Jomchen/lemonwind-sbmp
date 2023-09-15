@@ -13,7 +13,7 @@ import java.util.Date;
 public class JomkieEntity<T extends Model<?>> extends Model<T> implements Serializable, Comparable<T>, Cloneable {
 
     @TableId(value = "id", type = IdType.ASSIGN_ID)
-    protected Integer id;
+    protected Long id;
 
     @TableField(fill = FieldFill.INSERT)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -27,18 +27,18 @@ public class JomkieEntity<T extends Model<?>> extends Model<T> implements Serial
         super();
     }
 
-    public JomkieEntity(Integer id) {
+    public JomkieEntity(Long id) {
         super();
         this.id = id;
     }
 
-    public JomkieEntity(Integer id, Date createTime, Date updateTime) {
+    public JomkieEntity(Long id, Date createTime, Date updateTime) {
         this.id = id;
         this.createTime = createTime;
         this.updateTime = updateTime;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
@@ -50,7 +50,7 @@ public class JomkieEntity<T extends Model<?>> extends Model<T> implements Serial
         return updateTime;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
