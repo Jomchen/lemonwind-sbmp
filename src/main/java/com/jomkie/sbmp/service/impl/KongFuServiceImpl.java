@@ -53,4 +53,10 @@ public class KongFuServiceImpl extends ServiceImpl<KongFuMapper, KongFu> impleme
        removeById(id);
     }
 
+    @Transactional
+    @Override
+    public void myMulSave(List<KongFu> kongFuList) {
+        saveBatch(kongFuList);
+    }
+
 }

@@ -1,13 +1,10 @@
 package com.jomkie.sbmp.service;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.jomkie.sbmp.common.web.ResultObj;
 import com.jomkie.sbmp.entity.KongFu;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.LongStream;
 
 /**
  * <p>
@@ -24,5 +21,7 @@ public interface KongFuService extends IService<KongFu> {
    void mulSave(int n);
 
    void del(int id);
+
+   void myMulSave(List<KongFu> kongFuList);
 
 }

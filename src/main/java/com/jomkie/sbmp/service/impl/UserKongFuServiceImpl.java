@@ -9,6 +9,8 @@ import com.jomkie.sbmp.service.UserKongFuService;
 import com.jomkie.sbmp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
@@ -24,7 +26,7 @@ public class UserKongFuServiceImpl implements UserKongFuService {
     @Autowired
     private KongFuService kongFuService;
 
-    @Transactional
+    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT)
     @Override
     public ResultObj<String> addUserAndKongfu(int n) {
         User user = userService.getOne(new LambdaQueryWrapper<User>().orderByDesc(User::getId).last(" LIMIT 1"));
@@ -49,8 +51,8 @@ public class UserKongFuServiceImpl implements UserKongFuService {
             kongFuList.add(kongFu);
         });
 
-        userService.saveBatch(userList);
-        kongFuService.saveBatch(kongFuList);
+        userService.myMulSave(userList);
+        kongFuService.myMulSave(kongFuList);
 
         return ResultObj.success("关联批量执行成功");
     }
