@@ -41,9 +41,8 @@ public class UserKongFuServiceImpl implements UserKongFuService {
                     .setRealName("关联人员" + userId)
                     .setEmail("test" + userId + "@gmail.com");
             userBean.setId(userId);
-
-
             userList.add(userBean);
+
             KongFu kongFu = new KongFu();
             kongFu.setInventionUserId(userId);
             kongFu.setName("关联功夫" + userId);
@@ -53,7 +52,6 @@ public class UserKongFuServiceImpl implements UserKongFuService {
 
         userService.myMulSave(userList);
         kongFuService.myMulSave(kongFuList);
-
         return ResultObj.success("关联批量执行成功");
     }
 
