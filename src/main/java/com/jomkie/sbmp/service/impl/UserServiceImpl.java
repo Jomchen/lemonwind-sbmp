@@ -48,7 +48,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Transactional
     @Override
-    public void del(int id) {
+    public void del(long id) {
         super.removeById(id);
     }
 

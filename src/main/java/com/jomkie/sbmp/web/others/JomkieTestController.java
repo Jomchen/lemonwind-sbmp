@@ -1,4 +1,4 @@
-package com.jomkie.sbmp.web;
+package com.jomkie.sbmp.web.others;
 
 import com.jomkie.sbmp.common.web.ResultObj;
 import com.jomkie.sbmp.common.web.UrlConstant;

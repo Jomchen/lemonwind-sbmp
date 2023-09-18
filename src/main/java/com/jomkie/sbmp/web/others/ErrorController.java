@@ -1,4 +1,4 @@
-package com.jomkie.sbmp.web;
+package com.jomkie.sbmp.web.others;
 
 import com.jomkie.sbmp.common.web.ResultObj;
 import lombok.extern.slf4j.Slf4j;

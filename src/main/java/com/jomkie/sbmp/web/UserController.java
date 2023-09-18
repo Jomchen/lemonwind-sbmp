@@ -43,7 +43,7 @@ public class UserController {
      * @return
      */
     @RequestMapping(UrlConstant.USER_DEL)
-    public ResultObj<String> del(@PathVariable("id") int id) {
+    public ResultObj<String> del(@PathVariable("id") long id) {
         userService.del(id);
         return ResultObj.success("删除成功");
     }

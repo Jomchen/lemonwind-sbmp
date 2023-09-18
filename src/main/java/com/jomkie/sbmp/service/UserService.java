@@ -20,7 +20,7 @@ public interface UserService extends IService<User> {
 
     void mulSave(int n);
 
-    void del(int id);
+    void del(long id);
 
     void myMulSave(List<User> userList);
 

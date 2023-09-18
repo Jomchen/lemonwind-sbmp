@@ -29,7 +29,7 @@ public class KongFuController {
     }
 
     @RequestMapping(UrlConstant.KONGFU_DEL)
-    public ResultObj<String> del(int id) {
+    public ResultObj<String> del(long id) {
         kongFuService.del(id);
         return ResultObj.success("删除功夫" + id + "成功");
     }

@@ -20,7 +20,7 @@ public interface KongFuService extends IService<KongFu> {
 
    void mulSave(int n);
 
-   void del(int id);
+   void del(long id);
 
    void myMulSave(List<KongFu> kongFuList);
 
