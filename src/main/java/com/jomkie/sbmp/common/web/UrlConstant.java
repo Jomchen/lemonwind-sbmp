@@ -15,7 +15,6 @@ public interface UrlConstant {
     String KONGFU_MUL_SAVE = "/api/kongfu/mul/save/{n}";
     String KONGFU_DEL = "/api/kongfu/del/{id}";
 
-
     String MENPAI_FIND_ALL = "/api/menpai/find/all";
     String MENPAI_MUL_SAVE = "/api/menpai/mul/save/{n}";
     String MENPAI_DEL = "/api/menpai/del/{n}";

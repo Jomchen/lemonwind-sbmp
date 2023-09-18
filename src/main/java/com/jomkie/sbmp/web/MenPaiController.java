@@ -27,7 +27,7 @@ public class MenPaiController {
         return ResultObj.success("添加门派成功");
     }
 
-    @RequestMapping(UrlConstant.USER_DEL)
+    @RequestMapping(UrlConstant.MENPAI_DEL)
     public ResultObj<String> del(@PathVariable("id") long id) {
         menPaiService.del(id);
         return ResultObj.success("删除成功");

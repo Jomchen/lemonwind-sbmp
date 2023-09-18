@@ -6,6 +6,7 @@ import com.jomkie.sbmp.entity.User;
 import com.jomkie.sbmp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -42,7 +43,7 @@ public class UserController {
      * @param id
      * @return
      */
-    @RequestMapping(UrlConstant.USER_DEL)
+    @PostMapping(UrlConstant.USER_DEL)
     public ResultObj<String> del(@PathVariable("id") long id) {
         userService.del(id);
         return ResultObj.success("删除成功");
