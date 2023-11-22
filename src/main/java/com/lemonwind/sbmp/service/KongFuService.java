@@ -11,7 +11,7 @@ import java.util.List;
  * 功夫表 服务类
  * </p>
  *
- * @author Jomkie
+ * @author lemonwind
  * @since 2023-09-14 13:18:48
  */
 public interface KongFuService extends IService<KongFu> {

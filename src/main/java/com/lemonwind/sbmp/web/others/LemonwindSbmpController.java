@@ -3,7 +3,7 @@ package com.lemonwind.sbmp.web.others;
 import com.lemonwind.sbmp.common.web.UrlConstant;
 import com.lemonwind.sbmp.common.web.ResultObj;
 import com.lemonwind.sbmp.entity.User;
-import com.lemonwind.sbmp.service.JomkieSbmpService;
+import com.lemonwind.sbmp.service.LemonwindSbmpService;
 import com.lemonwind.sbmp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,20 +14,19 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 @RestController
-public class JomkieSbmpController {
+public class LemonwindSbmpController {
 
     @Autowired
-    private JomkieSbmpService jomkieSbmpService;
+    private LemonwindSbmpService lemonwindSbmpService;
     @Autowired
     private UserService userService;
 
     /**
      * @Description 测试所有
-     * @author jomkie
+     * @author lemonwind
      * @since 2022-09-13 10:32:01
-     * @return com.yunxi.sbmp.jomkie.action.common.ResultObj<java.lang.String>
      */
-    @GetMapping(UrlConstant.USER_JOMKIE_ALL)
+    @GetMapping(UrlConstant.USER_LEMONWIND_ALL)
     public ResultObj<Object> all(@PathVariable("code") Integer code) {
         Object data = null;
         if (Objects.equals(1, code)) {

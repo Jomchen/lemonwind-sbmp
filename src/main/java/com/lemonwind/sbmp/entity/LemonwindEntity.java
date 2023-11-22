@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import java.io.Serializable;
 import java.util.Date;
 
-public class JomkieEntity<T extends Model<?>> extends Model<T> implements Serializable, Comparable<T>, Cloneable {
+public class LemonwindEntity<T extends Model<?>> extends Model<T> implements Serializable, Comparable<T>, Cloneable {
 
     @TableId(value = "id", type = IdType.ASSIGN_ID)
     protected Long id;
@@ -23,16 +23,16 @@ public class JomkieEntity<T extends Model<?>> extends Model<T> implements Serial
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     protected Date updateTime;
 
-    public JomkieEntity() {
+    public LemonwindEntity() {
         super();
     }
 
-    public JomkieEntity(Long id) {
+    public LemonwindEntity(Long id) {
         super();
         this.id = id;
     }
 
-    public JomkieEntity(Long id, Date createTime, Date updateTime) {
+    public LemonwindEntity(Long id, Date createTime, Date updateTime) {
         this.id = id;
         this.createTime = createTime;
         this.updateTime = updateTime;

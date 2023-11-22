@@ -2,8 +2,8 @@ package com.lemonwind.sbmp.common.web;
 
 public interface UrlConstant {
 
-    String USER_JOMKIE_ALL = "/api/jomkie/user/all/{code}";
-    String TEST_JOMKIE_ALL = "/api/jomkie/test/all";
+    String USER_LEMONWIND_ALL = "/api/lemonwind/user/all/{code}";
+    String TEST_LEMONWIND_ALL = "/api/lemonwind/test/all";
 
     String U_KF_SAVE = "/api/uk/save/{n}";
 

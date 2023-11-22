@@ -5,11 +5,11 @@ import com.baomidou.mybatisplus.generator.FastAutoGenerator;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
-import com.lemonwind.sbmp.entity.JomkieEntity;
+import com.lemonwind.sbmp.entity.LemonwindEntity;
 
 /**
  * @Description mybatis 逆躺生成器
- * @author jomkie
+ * @author lemonwind
  * @since 2022-09-22 15:08:31
  */
 public class MybatisPlusGenerator {
@@ -17,7 +17,7 @@ public class MybatisPlusGenerator {
     static String url = "jdbc:mysql://127.0.0.1:3306/test?useSSL=false&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull";
     static String username = "root";
     static String password = "root";
-    static String author = "Jomkie";
+    static String author = "lemonwind";
     static String projectDir = System.getProperty("user.dir");
     static String outputDir = projectDir + "/src/main/java";
 
@@ -40,7 +40,7 @@ public class MybatisPlusGenerator {
                             .dateType(DateType.TIME_PACK) // 时间策略
                             .commentDate("yyyy-MM-dd HH:mm:ss") // 注释时间
                             .outputDir(outputDir) // 指定输出目录
-                            .author("Jomkie") // 作者
+                            .author("lemonwind") // 作者
                     ;
                 })
 
@@ -77,7 +77,7 @@ public class MybatisPlusGenerator {
                     ;
 
                     builder.entityBuilder()
-                        .superClass(JomkieEntity.class)
+                        .superClass(LemonwindEntity.class)
                         .enableActiveRecord()
                         .enableLombok()
                         .formatFileName("%s") // 文件输出格式

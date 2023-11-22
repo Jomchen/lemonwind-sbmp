@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 功夫表 Mapper 接口
  * </p>
  *
- * @author Jomkie
+ * @author lemonwind
  * @since 2023-09-14 13:18:48
  */
 @Mapper

@@ -18,7 +18,7 @@ import java.util.stream.LongStream;
  * 功夫表 服务实现类
  * </p>
  *
- * @author Jomkie
+ * @author lemonwind
  * @since 2023-09-14 13:18:48
  */
 @Service

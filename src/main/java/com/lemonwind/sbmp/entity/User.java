@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
  * 
  * </p>
  *
- * @author Jomkie
+ * @author lemonwind
  * @since 2022-09-22 14:39:44
  */
 @Data
@@ -23,7 +23,7 @@ import lombok.NoArgsConstructor;
 @Accessors(chain = true)
 @TableName(User.TABLE_NAME)
 @ApiModel(value = "User对象", description = "")
-public class User extends JomkieEntity<User> {
+public class User extends LemonwindEntity<User> {
     private static final long serialVersionUID = 2022092202393840044L;
     /** 物理表名称. */
     public static final String TABLE_NAME = "jo_user";

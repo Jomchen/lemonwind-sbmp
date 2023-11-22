@@ -4,7 +4,7 @@ import com.lemonwind.sbmp.common.web.ResultObj;
 import org.springframework.stereotype.Service;
 
 @Service
-public interface JomkieSbmpService {
+public interface LemonwindSbmpService {
 
     ResultObj<Object> all();
 

@@ -15,7 +15,7 @@ import java.util.stream.LongStream;
  * 门派 服务类
  * </p>
  *
- * @author Jomkie
+ * @author lemonwind
  * @since 2023-09-18 17:21:12
  */
 public interface MenPaiService extends IService<MenPai> {
