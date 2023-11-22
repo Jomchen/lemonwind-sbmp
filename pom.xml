@@ -4,12 +4,12 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.jomkie</groupId>
-  <artifactId>jomkie-sbmp</artifactId>
+  <groupId>com.lemonwind</groupId>
+  <artifactId>lemonwind-sbmp</artifactId>
   <packaging>jar</packaging>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>jomkie-sbmp</name>
+  <name>lemonwind-sbmp</name>
   <description>springboot+mybatisPlus项目</description>
 
   <properties>
@@ -96,7 +96,7 @@
       </resource>
     </resources>
 
-    <finalName>jomkie-sbmp</finalName>
+    <finalName>lemonwind-sbmp</finalName>
 
     <plugins>
       <plugin>
